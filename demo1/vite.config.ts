@@ -19,7 +19,7 @@ export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd())
 
   return {
-    server: { port: 3000 },
+    server: { port: 3001 },
     resolve: {
       alias: { '@': '/src/' },
     },

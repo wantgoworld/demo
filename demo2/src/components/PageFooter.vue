@@ -9,6 +9,7 @@
       <div>陕ICP备2023</div>
     </div>
     <div class="border-t pt-2">Copyright 2008~2022 ShanKe.chat All Right Reserved.</div>
+    <div class="border-t pt-2">time is {{time}}</div>
   </footer>
   <div class="fixed bottom-8 right-8 p-2 shadow-md bg-white rounded text-xs flex-col flex items-center justify-center">
     <n-icon :size="22">
@@ -19,4 +20,14 @@
 </template>
 <script setup lang="ts">
 import { HeadsetMicOutlined } from '@vicons/material'
+import { onMounted, onUnmounted } from 'vue'
+import http from '../request/http'
+const data = {
+  time: '',
+}
+onMounted(() => {
+  http.get('/').then(res => {
+    data.time = res.index
+  })
+})
 </script>
