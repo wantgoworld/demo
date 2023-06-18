@@ -1,0 +1,77 @@
+{
+  "name": "vite-vue3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "types-sync && husky install",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:style",
+    "lint:eslint": "eslint \"src/**/*.{vue,ts,js}\" --fix",
+    "lint:prettier": "prettier --config .prettierrc \"src/**/*.{vue,ts,js}\" --write",
+    "lint:style": "stylelint \"**/*.{html,vue,sass,scss,css}\" --fix"
+  },
+  "lint-staged": {
+    "*.{vue,ts,js}": [
+      "npm run lint"
+    ],
+    "*.{html,vue,sass,scss,css}": [
+      "npm run lint:style"
+    ]
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.51.13",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.8",
+    "lodash-es": "^4.17.21",
+    "naive-ui": "^2.34.4",
+    "pinia": "^2.1.4",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@types/eslint": "^8.40.2",
+    "@types/eslint-config-prettier": "^6.11.0",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/lint-staged": "^13.2.0",
+    "@types/lodash-es": "^4.17.7",
+    "@types/prettier": "^2.7.3",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "@vicons/material": "^0.12.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.14.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "postcss": "^8.4.24",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.4",
+    "stylelint": "^15.8.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "types-sync": "^3.40.0",
+    "typescript": "^4.9.3",
+    "unocss": "^0.51.13",
+    "unplugin-auto-import": "^0.14.4",
+    "unplugin-vue-components": "^0.24.1",
+    "unplugin-vue-router": "^0.6.4",
+    "vite": "^4.3.9",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-inspect": "^0.7.28",
+    "vite-plugin-stylelint": "^4.3.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^1.8.0"
+  }
+}
