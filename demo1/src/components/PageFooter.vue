@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full bg-#f1f1f1 py-4 px-8 text-xs">
+  <footer class="w-full fixed bottom-0 left-0 bg-#f1f1f1 py-4 px-8 text-xs">
     <div class="flex justify-between items-center mb-2">
       <ul class="flex items-center">
         <li class="mr-4">关于我们</li>
